@@ -1,8 +1,9 @@
-"use client";
+'use client'
 import { Metadata } from "next";
 import React from "react";
 import Style from "./page.module.css";
 import { useRouter } from "next/navigation";
+
 export const metadata: Metadata = {
   title: "Sp Site",
   description: "Sorry! Page Not Found",
@@ -11,6 +12,15 @@ export default function NotFound() {
   const router = useRouter();
   console.log("page not found");
   // You can add any UI inside Loading, including a Skeleton.
+  const send = async () => {
+    
+    // await sendMail({
+    //   to: "hard.sheth.sa@gmail.com",
+    //   name: "hard sheth",
+    //   subject: "Test Mail",
+    //   body: 'Hello test mail'
+    // });
+  };
   return (
     <div className="position-relative">
       <div className="container">
@@ -39,7 +49,10 @@ export default function NotFound() {
               <button
                 className="btn btn-outline-primary w-100 rounded-pill"
                 type="button"
-                onClick={() => router.back()}
+                onClick={() => {
+                  router.back()
+                  // send()
+                }}
               >
                 Go Back
               </button>

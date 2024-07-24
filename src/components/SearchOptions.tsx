@@ -39,7 +39,7 @@ function SearchInput({
   );
   const [showOptions, setShowOptions] = useState<boolean>(false);
   console.log(options, "options");
-
+  
   return (
     <div className={`${Style['sticky-search']} bg-white text-secondary ${rounded ? `border border-1 rounded-pill` : "" }`}>
       <div className="position-relative h-100">
@@ -50,7 +50,7 @@ function SearchInput({
             </div>
 
             <div
-              className={`d-flex align-items-center w-100 border border-1 ${
+              className={`d-flex align-items-center w-100 border border-0 ${
                 rounded ? Style.searchparent : ""
               }`}
             >
@@ -82,9 +82,9 @@ function SearchInput({
                 <IoMdClose />
               </span>}
             </div>
-            <div className="">
+            <div className="border-start-0">
               {placeBtn == "right" && (
-                <button type="button" className={`btn border-0`}>
+                <button type="button" className={`btn border-0`} >
                   {btnText}
                 </button>
               )}

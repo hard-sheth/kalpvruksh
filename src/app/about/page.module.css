@@ -1,0 +1,15 @@
+.text-dark-hover:hover {
+  background-color: #212529;
+  color: whitesmoke;
+}
+.text-dark-hover {
+  background-color: #f4b323;
+  color: #212529;
+}
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  /* font-family: "Cedarville Cursive", cursive; */
+  font-weight: 100;
+  font-style: normal;
+  color: #9f4103;
+}

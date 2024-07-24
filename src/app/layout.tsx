@@ -20,10 +20,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body className={inter.className}>
-        <AppHeader />
-        {children}
-        <AppFooter />
+        <div className="container-fluid">
+          <AppHeader />
+          {children}
+          <AppFooter />
+        </div>
       </body>
     </html>
   );

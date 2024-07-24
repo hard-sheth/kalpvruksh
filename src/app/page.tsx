@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import moment from "moment";
+import { send } from "./action";
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
       </div>
       <div className="my-4">
         <div className="mt-5">
-          <FaRegCalendarAlt /> {moment().format("MMMM D,yyyy")}
+          <FaRegCalendarAlt /> {moment().format("MMMM Do,yyyy")}
         </div>
         <div className="col-10 mx-auto">
           <h1 className="fw-bold">
@@ -60,23 +61,44 @@ export default function Home() {
             <li>
               <p className="fw-bold fs-4">Regulates Blood Sugar</p>
               <p>
-              Any carbohydrate-containing food, including those using whole wheat or white flour, influences your blood sugar levels. After a meal, your body converts the carbohydrates in your meals into glucose, a simple sugar. The Glycemic Index or GI of food serves as a measure of how quickly this process occurs. Whole wheat flour has a lower GI compared to your regular wheat flour. It helps you absorb your food better and prevents your blood sugar from suddenly spiking or crashing.
+                Any carbohydrate-containing food, including those using whole
+                wheat or white flour, influences your blood sugar levels. After
+                a meal, your body converts the carbohydrates in your meals into
+                glucose, a simple sugar. The Glycemic Index or GI of food serves
+                as a measure of how quickly this process occurs. Whole wheat
+                flour has a lower GI compared to your regular wheat flour. It
+                helps you absorb your food better and prevents your blood sugar
+                from suddenly spiking or crashing.
               </p>
             </li>
             <li>
               <p className="fw-bold fs-4">Improves Gut Health</p>
               <p>
-              Thanks to its high fiber content, wheat bran has a prebiotic effect on the human gut bacteria. It helps break down the good bacteria in your gastrointestinal system and improves digestion. It can also help you increase nutritional uptake in your body as it contains a variety of vitamins, including B-1, B-3, and B-5, which keep your gut health in check.
+                Thanks to its high fiber content, wheat bran has a prebiotic
+                effect on the human gut bacteria. It helps break down the good
+                bacteria in your gastrointestinal system and improves digestion.
+                It can also help you increase nutritional uptake in your body as
+                it contains a variety of vitamins, including B-1, B-3, and B-5,
+                which keep your gut health in check.
               </p>
             </li>
             <li>
               <p className="fw-bold fs-4">The Bottom Line</p>
               <p>
-              Making a few simple changes to your diet allows you to receive the nutritious benefits of whole-wheat flour without sacrificing the things you enjoy. For starters, try using a blend of whole wheat atta and regular atta and slowly make your switch. Organic Tattva’s Whole Wheat Flour is one of the best whole wheat flours available in the market. They provide you with all the health benefits while not compromising on the taste.
+                Making a few simple changes to your diet allows you to receive
+                the nutritious benefits of whole-wheat flour without sacrificing
+                the things you enjoy. For starters, try using a blend of whole
+                wheat atta and regular atta and slowly make your switch. Organic
+                Tattva’s Whole Wheat Flour is one of the best whole wheat flours
+                available in the market. They provide you with all the health
+                benefits while not compromising on the taste.
               </p>
             </li>
-     
           </ul>
+          <button type="button" className="btn btn-primary" onClick={send}>
+            Send mail
+          </button>
+          {/* <Datecalnder /> */}
         </div>
       </div>
     </div>

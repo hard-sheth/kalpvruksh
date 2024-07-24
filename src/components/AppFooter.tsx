@@ -2,7 +2,10 @@ import { CiMail } from "react-icons/ci";
 import Style from "./Appfooter.module.css";
 import Image from "next/image";
 import moment from "moment";
+import { sendMail } from "@/lib/mail";
+import Link from "next/link";
 function AppFooter() {
+
   return (
     <div className="container-fluid bg-light pt-4">
       <div className="row col-12 col-md-6 mx-auto text-center">
@@ -16,7 +19,7 @@ function AppFooter() {
             <CiMail />
           </div>
           <input
-            type="text"
+            type="search"
             className="form-control border-start-0 border-end-0"
             id="inlineFormInputGroupUsername"
             placeholder="Enter your email address"
@@ -27,8 +30,12 @@ function AppFooter() {
       <div className="row gx-5 h-100 row-cols-4 px-2 px-lg-5">
         <div className="col">
           <h1 className="mt-3 fs-5 fw-bold border-bottom">Company</h1>
-          <p>About Us</p>
-          <p>Contact Us</p>
+          <p>
+            <Link href={"about"}>About Us</Link>
+          </p>
+          <p>
+            <Link href={"/contactus"}>Contact Us</Link>
+          </p>
           <h1 className="mt-3 fs-5 fw-bold border-bottom">Policies</h1>
           <p>Privacy Policy</p>
           <p>Cancellation & Return Policy </p>
@@ -139,11 +146,12 @@ function AppFooter() {
           </ul>
         </div>
       </div>
-      <div className="row">
-        <div className="col-12 mx-auto text-center col-md-6">
-          <p className="fs-6 fw-bold">
-        Made with Love | Organic Tattva copyright {moment().format('YYYY')}
-        </p>
+      <div className="row bg-white ">
+        <div className="col-12 mx-auto text-center col-md-6 align-items-center">
+          <p className="fs-6 fw-bold py-3">
+            Made with Love | Solution Analysts copyright{" "}
+            {moment().format("YYYY")}
+          </p>
         </div>
       </div>
     </div>

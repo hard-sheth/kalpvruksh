@@ -46,7 +46,7 @@ function AppHeader() {
           backdrop={false}
           scrollable
           toggle={toggleOffcanvas}
-          className={`w-75 d-lg-none`}
+          className={`w-75 d-md-none`}
         >
           <OffcanvasHeader toggle={toggleOffcanvas}>
             <div className="col-12">
