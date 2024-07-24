@@ -1,0 +1,58 @@
+.header-top {
+  background-image: url("https://waffy-demo.myshopify.com/cdn/shop/files/tab-slider2_206e8708-9b6f-4b18-bc8a-4db3ec5ebd6e.jpg?v=1542966804");
+  background-size: cover;
+  height: 400px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+ul {
+  list-style-type: none;
+}
+.spicy-rice-regular {
+  font-family: "Spicy Rice", serif;
+  /* font-family: "Cedarville Cursive", cursive; */
+  font-weight: 100;
+  font-style: normal;
+  color: #9f4103;
+}
+.text-dark-hover {
+  background-color: #f4b323;
+  color: #212529;
+}
+.w-98 {
+  width: 98%;
+}
+
+@keyframes uptodown {
+  from {
+    top: -15px;
+  }
+  to {
+    top: 0px;
+  }
+}
+
+@keyframes downtoup {
+  from {
+    background-color: red;
+  }
+  to {
+    background-color: yellow;
+  }
+}
+.nav-visible {
+  position: sticky;
+  right: 0;
+  left: 0;
+  /* animation-name: uptodown;
+  animation-duration: 2s; */
+  transition: top 5s ease;
+ 
+}
+.nav-visible.hide {
+  display: none;
+  top: -15;
+}
+.show{
+  top:0
+}
